@@ -3,131 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Dinner</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffe6e6;
-            background-image: url('https://via.placeholder.com/1500x1000/FFCCCC/FFFFFF?text=Happy+Valentine%27s+Day');
-            background-size: cover;
-            background-position: center;
-            color: #600;
-        }
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #ff9999;
-            color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            margin: 0;
-        }
-        form {
-            max-width: 600px;
-            margin: 40px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        label {
-            display: block;
-            margin: 15px 0 5px;
-            font-weight: bold;
-        }
-        select, button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #ff6666;
-            color: white;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #e05555;
-        }
-    </style>
+    <title>Goddess - Jadaa Arnold Profile</title>
+    <!-- Open Graph tags for social media and search crawlers -->
+    <meta property="og:title" content="Goddess">
+    <meta property="og:description" content="View the profile and gallery featuring image.png.">
+    <meta property="og:image" content="image.png">
 </head>
 <body>
-    <header>
-        <h1>Valentine's Day Dinner Selection</h1>
-        <p>Pick your favorites for our special evening!</p>
-    </header>
-    <form id="valentineForm">
-        <label for="entree">Choose Your Entrée:</label>
-        <select id="entree" name="entree">
-            <option value="salmon">Salmon</option>
-            <option value="steak">Steak</option>
-            <option value="lobster">Lobster Tail</option>
-            <option value="short_ribs">Braised Short Ribs</option>
-        </select>
 
-        <label for="side">Choose Your Side:</label>
-        <select id="side" name="side">
-            <option value="mashed_potatoes">Mashed Potatoes</option>
-            <option value="baked_potatoes">Baked Potatoes</option>
-            <option value="veggies">Veggies</option>
-            <option value="rice">Rice</option>
-        </select>
+    <h1>Goddess</h1>
+    <p>Check out the gallery below, featuring the iconic profile layout.</p>
 
-        <label for="dessert">Choose Your Dessert:</label>
-        <select id="dessert" name="dessert">
-            <option value="Me">Me</option>
-            <option value="Crumbl">Crumbl Cookie</option>
-            <option value="Fruit_cheese">Fruit & Cheese Plate</option>
-            <option value="Cake">Cake</option>
-        </select>
+    <!-- The critical image tag with Alt text for Google Image Search -->
+    <img src="image.png" alt="Goddess" title="Goddess - Jadaa Arnold" width="500">
 
-        <button type="submit">Submit Your Choices</button>
-    </form>
-
-    <script>
-        document.getElementById('valentineForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const entree = document.getElementById('entree').value;
-            const side = document.getElementById('side').value;
-            const dessert = document.getElementById('dessert').value;
-
-            alert(`Your choices:\nEntree: ${entree}\nSide: ${side}\nDessert: ${dessert}`);
-        });
-    </script>
 </body>
 </html>
 
-<script>
-    document.getElementById('valentineForm').addEventListener('submit', async function(event) {
-        event.preventDefault();
+     
 
-        const entree = document.getElementById('entree').value;
-        const side = document.getElementById('side').value;
-        const dessert = document.getElementById('dessert').value;
 
-        try {
-            const response = await fetch('https://<dinner-menu-kappa>.vercel.app/api/send-sms', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ entree, side, dessert }),
-            });
-
-            if (response.ok) {
-                alert('Your choices have been submitted!');
-            } else {
-                alert('Failed to submit choices.');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred while submitting your choices.');
-        }
-    });
-</script>
